@@ -1,0 +1,6 @@
+{
+  "DB_URL": "mysql://<USER>:<PASSWORD>@<HOST>/<DBNAME>",
+  "JWT_KEY": "<KEY>",
+  "JWT_TTL": "7200",
+  "JWT_ALG": "HS256"
+}

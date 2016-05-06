@@ -1,0 +1,6 @@
+vendor/
+.idea/
+.env
+bin/*
+config.json
+behat.yml

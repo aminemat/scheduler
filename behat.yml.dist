@@ -1,0 +1,9 @@
+default:
+  suites:
+    default:
+      contexts:
+        - Feature\Bootstrap\FeatureContext:
+          - "http://localhost:8000/v1/"
+        - Feature\Bootstrap\DBContext:
+          - "DATABASE_URL"
+          - "features/resources/db.sql"

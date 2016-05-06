@@ -1,0 +1,45 @@
+{
+  "name": "aminemat/scheduler",
+  "description": "Yet another scheduler!",
+  "type": "project",
+  "require": {
+    "equip/framework": "^1.8",
+    "myclabs/php-enum": "^1.4",
+    "josegonzalez/dotenv": "^2.0",
+    "nesbot/carbon": "^1.21",
+    "ramsey/uuid": "^3.4",
+    "monolog/monolog": "^1.19",
+    "equip/auth": "^1.1",
+    "firebase/php-jwt": "^3",
+    "doctrine/dbal": "^2.5",
+    "league/fractal": "^0.13.0",
+    "respect/validation": "^1.1",
+    "lukasoppermann/http-status": "^2.0",
+    "microlib/config": "^0.1.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^5.3",
+    "behat/behat": "^3.1",
+    "guzzlehttp/guzzle": "^6.2",
+    "tebru/multi-array": "^0.2.1",
+    "mockery/mockery": "^0.9.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Scheduler\\": "src/",
+      "App\\": "app/",
+      "Test\\": "tests/",
+      "Feature\\": "features/"
+    }
+  },
+  "config":{
+    "bin-dir": "bin"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Amine Matmati",
+      "email": "amine.matmati@gmail.com"
+    }
+  ]
+}
