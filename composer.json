@@ -3,6 +3,7 @@
   "description": "Yet another scheduler!",
   "type": "project",
   "require": {
+    "php": ">=5.6",
     "equip/framework": "^1.8",
     "myclabs/php-enum": "^1.4",
     "josegonzalez/dotenv": "^2.0",
