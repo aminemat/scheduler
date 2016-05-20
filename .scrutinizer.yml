@@ -1,4 +1,13 @@
 build:
-  environment:
-    php:
-      version: 5.6.9
+    environment:
+        php:
+            version: 5.6.9
+
+    tests:
+        override:
+            -
+                command: 'bin/phpunit --coverage-clover=build/coverage-clover'
+                coverage:
+                    file: 'build/coverage-clover'
+                    format: 'clover'
+
