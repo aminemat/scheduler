@@ -2,6 +2,7 @@
 
 namespace Test\Persistence;
 
+use App\Config\Config;
 use Mockery as m;
 use Scheduler\Domain\EntityId;
 use Scheduler\Domain\Shift\Shift;
@@ -24,7 +25,14 @@ class ShiftFactoryTest extends \PHPUnit_Framework_TestCase
             $userMock
         );
 
-        $this->shiftFactory = new ShiftFactory($userRepositoryMock);
+        $config = new Config();
+        $config = $config->withData(
+            [
+                'DEFAULT_TIMEZONE' => 'UTC'
+            ]
+        );
+
+        $this->shiftFactory = new ShiftFactory($userRepositoryMock, $config);
     }
 
     public function test_creates_a_valid_shift_fron_an_array_of_database_data()

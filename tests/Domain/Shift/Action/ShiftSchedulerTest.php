@@ -82,7 +82,7 @@ class ShiftSchedulerTest extends PHPUnit_Framework_TestCase
 
 
         $shiftFactoryInterface = m::mock(ShiftFactoryInterface::class);
-        $shiftFactoryInterface->shouldReceive('fromInputData')->andReturn($shiftMock);
+        $shiftFactoryInterface->shouldReceive('fromArray')->andReturn($shiftMock);
 
         $shiftRepositoryMock = m::mock(ShiftRepositoryInterface::class);
         $shiftRepositoryMock->shouldReceive('saveShift')->with($userMock, $shiftMock);
