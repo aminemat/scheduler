@@ -2,5 +2,6 @@
   "DB_URL": "mysql://root:@localhost/scheduler-test",
   "JWT_KEY": "97/*9&+)_)_#!@<E SAD)(@#@#545AS",
   "JWT_TTL": "7200",
-  "JWT_ALG": "HS256"
+  "JWT_ALG": "HS256",
+  "DEFAULT_TIMEZONE": "UTC"
 }
