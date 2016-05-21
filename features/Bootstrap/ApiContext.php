@@ -242,7 +242,7 @@ class ApiContext implements Context
     {
         try {
             $this->response = $this->getClient()->send($this->request);
-            $this->setMultiArray();
+            $this->setMultiArray($this->response->getBody()->getContents());
         } catch (RequestException $e) {
             $this->response = $e->getResponse();
 
@@ -447,13 +447,18 @@ class ApiContext implements Context
         echo json_encode(json_decode($this->response->getBody()->getContents()), JSON_PRETTY_PRINT);        
     }
 
-    private function setMultiArray()
+    /**
+     * Sets the response content in a MultiArray instance for easy response validation
+     * @param $responseContent
+     */
+    private function setMultiArray($responseContent)
     {
-        $responseContent = json_decode($this->response->getBody()->getContents(), true);
+        $jsonResponseContent = json_decode($responseContent, true);
         $error = json_last_error();
         if ($error) {
-            throw new InvalidArgumentException('Invalid json provided: ' . print_r($responseContent, true));
+            print_r($responseContent);
+            throw new InvalidArgumentException('Invalid json provided');
         }
-        $this->responseBody = new MultiArray($responseContent);
+        $this->responseBody = new MultiArray($jsonResponseContent);
     }
 }
