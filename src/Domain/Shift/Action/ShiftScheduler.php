@@ -78,7 +78,7 @@ class ShiftScheduler implements DomainInterface
                 'break' => $input['break'],
             ];
 
-            $shift = $this->shiftFactory->fromInputData($data);
+            $shift = $this->shiftFactory->fromArray($data);
             $this->shiftRepository->saveShift($manager, $shift);
         } catch (InvalidArgumentException $exception) {
             return $this->payload

@@ -47,7 +47,7 @@ class ShiftFactoryTest extends \PHPUnit_Framework_TestCase
             m::mock(User::class)
         );
 
-        $actualShift = $this->shiftFactory->fromDBData($dbData);
+        $actualShift = $this->shiftFactory->fromArray($dbData);
 
         $this->assertEquals($expectedShift, $actualShift);
     }
@@ -72,7 +72,7 @@ class ShiftFactoryTest extends \PHPUnit_Framework_TestCase
             m::mock(User::class)
         );
 
-        $actualShift = $this->shiftFactory->fromInputData($inputData);
+        $actualShift = $this->shiftFactory->fromArray($inputData);
 
         $this->assertInstanceOf(EntityId::class, $actualShift->getId());
         $this->assertEquals($expectedShift->getStartTime(), $actualShift->getStartTime());

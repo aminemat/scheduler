@@ -86,7 +86,7 @@ class DBALShiftRepository implements ShiftRepositoryInterface
 
         $shifts = [];
         foreach ($rows as $row) {
-            $shifts[] = $this->shiftFactory->fromDBData($row);
+            $shifts[] = $this->shiftFactory->fromArray($row);
         }
 
         return $shifts;
@@ -118,7 +118,7 @@ class DBALShiftRepository implements ShiftRepositoryInterface
 
         $shifts = [];
         foreach ($rows as $row) {
-            $shifts[] = $this->shiftFactory->fromDBData($row);
+            $shifts[] = $this->shiftFactory->fromArray($row);
         }
 
         return $shifts;
@@ -240,6 +240,6 @@ class DBALShiftRepository implements ShiftRepositoryInterface
             throw new ShiftNotFoundException();
         }
 
-        return $this->shiftFactory->fromDBData($row);
+        return $this->shiftFactory->fromArray($row);
     }
 }

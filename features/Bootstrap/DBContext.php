@@ -109,8 +109,8 @@ class DBContext implements Context, SnippetAcceptingContext
                 ->setParameter(2, $row['employee_id'])
                 ->setParameter(3, $row['manager_id'])
                 ->setParameter(4, $row['break'])
-                ->setParameter(5, new \DateTime($row['start_time']), 'datetimetz')
-                ->setParameter(6, new \DateTime($row['end_time']), 'datetimetz')
+                ->setParameter(5, $this->createUTCDateTime($row['start_time']), 'datetime')
+                ->setParameter(6, $this->createUTCDateTime($row['start_time']), 'datetime')
                 ->execute();
         }
     }
@@ -122,6 +122,19 @@ class DBContext implements Context, SnippetAcceptingContext
     public function iSetRequestHeaderWithValue($arg1, $arg2)
     {
         throw new PendingException();
+    }
+
+    /**
+     * Creates a UTC datetime from a string
+     * @param string $date
+     * @return DateTime
+     */
+    private function createUTCDateTime($date)
+    {
+        $dateTime = new \DateTime($date);
+        $dateTime->setTimezone(new \DateTimeZone('UTC'));
+
+        return $dateTime;
     }
 
 }
