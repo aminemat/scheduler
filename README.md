@@ -4,6 +4,7 @@
 [![Build Status](https://scrutinizer-ci.com/g/aminemat/scheduler/badges/build.png?b=master)](https://scrutinizer-ci.com/g/aminemat/scheduler/build-status/master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/aminemat/scheduler/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/aminemat/scheduler/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/aminemat/scheduler/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/aminemat/scheduler/?branch=master)
+[![Code Climate](https://codeclimate.com/github/aminemat/scheduler/badges/gpa.svg)](https://codeclimate.com/github/aminemat/scheduler)
 
 A shift scheduling application exposing an API.
 Used as playground to test the [Equip](https://github.com/equip/framework) framework
