@@ -3,8 +3,18 @@ build:
         php:
             version: 5.6.9
 
+    project_setup:
+        before:
+            -
+                command: 'cp behat.yml.ci behat.yml'
+            -
+                command: 'php -S localhost:8000  web/index.php'
+                background: true
+
     tests:
         override:
+            -
+                command: 'bin/behat'
             -
                 command: 'bin/phpunit --coverage-clover=build/coverage-clover'
                 coverage:

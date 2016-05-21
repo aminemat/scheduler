@@ -5,5 +5,5 @@ default:
         - Feature\Bootstrap\FeatureContext:
           - "http://localhost:8000/v1/"
         - Feature\Bootstrap\DBContext:
-          - "mysql://root:matmati@localhost"
+          - "mysql://root:@localhost"
           - "features/resources/db.sql"
