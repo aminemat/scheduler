@@ -8,6 +8,8 @@ build:
             -
                 command: 'cp behat.yml.ci behat.yml'
             -
+                command: 'cp config.json.ci config.json'
+            -
                 command: 'php -S localhost:8000  web/index.php'
                 background: true
 
@@ -20,4 +22,3 @@ build:
                 coverage:
                     file: 'build/coverage-clover'
                     format: 'clover'
-
