@@ -28,6 +28,7 @@ Feature: As an employee,
   by being able to see all of the shifts assigned to me.
     Given I send a GET request to "/worked-hours"
     Then the response code should be 200
+    And print response
     And The response validates:
       | property        | value     | type    |
       | employee        | employee1 | string  |

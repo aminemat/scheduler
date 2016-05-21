@@ -26,8 +26,8 @@ Feature: As a manager,
     Then The response validates:
       | property             | value                         | type   |
       | shift.id             | <skip>                        | string |
-      | shift.start          | Fri, 07 Mar 14 08:30:00 -0000 | string |
-      | shift.end            | Fri, 07 Mar 14 17:30:00 -0000 | string |
+      | shift.start          | Fri, 07 Mar 14 08:30:00 +0000 | string |
+      | shift.end            | Fri, 07 Mar 14 17:30:00 +0000 | string |
       | shift.break          | 0.5                           | string |
       | shift.manager.id     | manager_1                     | string |
       | shift.manager.name   | manager                       | string |
@@ -45,8 +45,8 @@ Feature: As a manager,
 """
   {
     "employee_id": "foobar", 
-    "start_time": "Fri, 07 Mar 2014 08:30:00 -0600", 
-    "end_time": "Fri, 07 Mar 2014 17:30:00 -0600",
+    "start_time": "Fri, 07 Mar 2014 08:30:00",
+    "end_time": "Fri, 07 Mar 2014 17:30:00",
     "break": "0.5"
     }
 """
@@ -60,8 +60,8 @@ Feature: As a manager,
 """
   {
     "employee_id": "employee_1", 
-    "start_time": "Fri, 07 Mar 2014 05:30:00 -0600",
-    "end_time": "Fri, 07 Mar 2014 04:30:00 -0600", 
+    "start_time": "Fri, 07 Mar 2014 05:30:00",
+    "end_time": "Fri, 07 Mar 2014 04:30:00",
     "break": "0.5"
     }
 """
