@@ -17,8 +17,8 @@ build:
 
     tests:
         override:
-            -
-                command: 'bin/behat'
+#            -
+#                command: 'bin/behat'
             -
                 command: 'bin/phpunit --coverage-clover=build/coverage-clover'
                 coverage:

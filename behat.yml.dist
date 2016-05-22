@@ -3,7 +3,7 @@ default:
     default:
       contexts:
         - Feature\Bootstrap\FeatureContext:
-          - "http://localhost:8000/v1/"
+          - "http://localhost:8000/v1/" # Update the base URL if you run your server in a different host or port
         - Feature\Bootstrap\DBContext:
-          - "DATABASE_URL"
+          - "mysql://DB_USER:DB_PASS@DB_HOST/scheduler-test" # Don't change the database name.
           - "features/resources/db.sql"
