@@ -98,6 +98,9 @@ this command will run the web server bundled with PHP on port 8000
 bin/behat
 ```
 
+# Postman collection
+
+Love postman? Import [this collection](postman_collection.json) and rock on!
 
 ## Limitations:
 
