@@ -1,7 +1,0 @@
-{
-  "DB_URL": "mysql://root:matmati@localhost/scheduler-test",
-  "JWT_KEY": "foobar",
-  "JWT_TTL": "7200",
-  "JWT_ALG": "HS256",
-  "DEFAULT_TIMEZONE": "UTC"
-}
