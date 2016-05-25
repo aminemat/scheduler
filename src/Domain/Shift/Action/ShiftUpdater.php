@@ -11,7 +11,6 @@ use Respect\Validation\Validator;
 use Scheduler\Domain\User\Contract\UserRepositoryInterface;
 use Scheduler\Domain\User\User;
 use Scheduler\Middleware\UserExtractor;
-use Scheduler\Persistence\ShiftFactory;
 
 class ShiftUpdater implements DomainInterface
 {
@@ -23,11 +22,6 @@ class ShiftUpdater implements DomainInterface
     private $shiftRepository;
 
     /**
-     * @var ShiftFactory
-     */
-    private $shiftFactory;
-
-    /**
      * @var UserRepositoryInterface
      */
     private $userRepository;
@@ -36,19 +30,16 @@ class ShiftUpdater implements DomainInterface
      * ShiftProvider constructor.
      *
      * @param ShiftRepositoryInterface $shiftRepository
-     * @param ShiftFactory             $shiftFactory
      * @param PayloadInterface         $payload
      * @param UserRepositoryInterface  $userRepository
      */
     public function __construct(
         ShiftRepositoryInterface $shiftRepository,
-        ShiftFactory $shiftFactory,
         PayloadInterface $payload,
         UserRepositoryInterface $userRepository
     ) {
         $this->payload = $payload;
         $this->shiftRepository = $shiftRepository;
-        $this->shiftFactory = $shiftFactory;
         $this->userRepository = $userRepository;
     }
 

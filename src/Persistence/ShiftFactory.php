@@ -7,7 +7,6 @@ use Scheduler\Domain\EntityId;
 use Scheduler\Domain\Shift\Contract\ShiftFactoryInterface;
 use Scheduler\Domain\Shift\Shift;
 use Scheduler\Domain\User\Contract\UserRepositoryInterface;
-use Scheduler\Domain\User\User;
 
 class ShiftFactory implements ShiftFactoryInterface
 {

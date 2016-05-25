@@ -1,5 +1,4 @@
 vendor/
-.idea/
 .env
 bin/*
 config.json

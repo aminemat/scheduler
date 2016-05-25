@@ -44,7 +44,7 @@ class UserExtractor
      *
      * @return ServerRequestInterface
      */
-    private function storeUserInRequest($request, $userId)
+    private function storeUserInRequest(ServerRequestInterface $request, $userId)
     {
         return $request->withAttribute(self::USER_ATTRIBUTE, $userId);
     }
