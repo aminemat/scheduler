@@ -6,6 +6,9 @@
 [![Code Coverage](https://scrutinizer-ci.com/g/aminemat/scheduler/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/aminemat/scheduler/?branch=master)
 [![Code Climate](https://codeclimate.com/github/aminemat/scheduler/badges/gpa.svg)](https://codeclimate.com/github/aminemat/scheduler)
 
+
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/7e9ca915-ef0a-4d1d-8d0c-7d6b40d2e0b8/big.png)](https://insight.sensiolabs.com/projects/7e9ca915-ef0a-4d1d-8d0c-7d6b40d2e0b8)
+
 A shift scheduling application exposing a "REST" API.
 Used as playground to test the [Equip](https://github.com/equip/framework) framework
 and all the things [PSR-7](http://www.php-fig.org/psr/psr-7/) and [ADR](https://github.com/pmjones/adr).
