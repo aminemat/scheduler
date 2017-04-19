@@ -42,9 +42,7 @@ class Adapter implements AdapterInterface
     public function __construct(
         GeneratorInterface $generator,
         ParserInterface $parser,
-        UserRepositoryInterface $userRepository,
-        TokenRepositoryInterface $tokenRepository
-    ) {
+        UserRepositoryInterface $userRepository, TokenRepositoryInterface $tokenRepository) {
         $this->generator = $generator;
         $this->parser = $parser;
         $this->userRepository = $userRepository;
@@ -70,9 +68,9 @@ class Adapter implements AdapterInterface
      * @throws \Equip\Auth\Exception\AuthException    if another error occurs
      *                                                during authentication
      */
-    public function validateToken($token)
-    {
-        if (!$this->tokenRepository->tokenExists($token)) {
+    public function validateToken($token){
+        if(!$this->tokenRepository->tokenExists($token)) 
+        {
             throw InvalidException::invalidToken($token);
         }
 
@@ -104,16 +102,17 @@ class Adapter implements AdapterInterface
     {
         try {
             $user = $this->userRepository->loadUserByCredentials($credentials);
-        } catch (\Exception $e) {
+        } 
+        catch (\Exception $e) {
             throw new InvalidException();
         }
 
-        $metadata = [
+        $metadata = array(
             'userId' => (string) $user->getId(),
             'userRole' => (string) $user->getRole(),
             'userName' => (string) $user->getName(),
             'userEmail' => (string) $user->getEmail(),
-        ];
+        );
 
         $claims = [
             'jti' => 'tokenId',
