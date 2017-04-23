@@ -47,6 +47,7 @@ class Adapter implements AdapterInterface
         $this->parser = $parser;
         $this->userRepository = $userRepository;
         $this->tokenRepository = $tokenRepository;
+        $a = array();
     }
 
     /**
